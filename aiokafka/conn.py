@@ -277,7 +277,7 @@ class AIOKafkaConnection:
         expect_response = True
 
         while True:
-            res = await (await authenticator.step(auth_bytes))
+            res = await authenticator.step(auth_bytes)
             if res is None:
                 break
             payload, expect_response = res
